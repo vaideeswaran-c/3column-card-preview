@@ -1,0 +1,130 @@
+:root {
+	--Bright-orange: hsl(31, 77%, 52%);
+	--Dark-cyan: hsl(184, 100%, 22%);
+	--Very-dark-cyan: hsl(179, 100%, 13%);
+	--Transparent-white: hsla(0, 0%, 100%, 0.75);
+	--Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 15px;
+	font-family: "Lexend Deca", sans-serif;
+	background-color: var(--Very-light-gray);
+	min-height: 100vh;
+	color: var(--Transparent-white);
+}
+
+.container {
+	padding: 15px;
+	margin: auto;
+}
+
+.container .card {
+	padding: 30px 50px;
+	min-height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.container .card:nth-child(1) {
+	background-color: var(--Bright-orange);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.container .card:nth-child(2) {
+	background-color: var(--Dark-cyan);
+}
+
+.container .card:nth-child(3) {
+	background-color: var(--Very-dark-cyan);
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.container .card h1 {
+	font-family: "Big Shoulders Display", cursive;
+	text-transform: uppercase;
+	padding: 20px 0;
+	font-size: 30px;
+	color: var(--Very-light-gray);
+}
+
+.container .card p {
+	line-height: 1.8;
+	padding-bottom: 30px;
+}
+
+.container .card button {
+	padding: 20px 40px;
+	border-radius: 50px;
+	border: 0;
+	font-size: 15px;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.container .card:nth-child(1) button {
+	color: var(--Bright-orange);
+}
+.container .card:nth-child(2) button {
+	color: var(--Dark-cyan);
+}
+.container .card:nth-child(3) button {
+	color: var(--Very-dark-cyan);
+}
+
+.container .card:nth-child(1) button:hover {
+	color: var(--Very-light-gray);
+	background-color: var(--Bright-orange);
+	border: 2px solid var(--Very-light-gray);
+}
+.container .card:nth-child(2) button:hover {
+	color: var(--Very-light-gray);
+	background-color: var(--Dark-cyan);
+	border: 2px solid var(--Very-light-gray);
+}
+.container .card:nth-child(3) button:hover {
+	color: var(--Very-light-gray);
+	background-color: var(--Very-dark-cyan);
+	border: 2px solid var(--Very-light-gray);
+}
+
+@media (min-width: 768px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 15px 200px;
+	}
+
+	.container .card {
+		min-height: 500px;
+	}
+
+	.container .card:nth-child(1) {
+		border-top-left-radius: 5px;
+		border-top-right-radius: 0px;
+		border-bottom-left-radius: 5px;
+	}
+
+	.container .card:nth-child(3) {
+		border-top-right-radius: 5px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 5px;
+	}
+}
